@@ -21,12 +21,10 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
-
 
 /**
  * @author Jacky.gao
@@ -82,7 +80,9 @@ public abstract class BaseServletAction implements ServletAction {
 		return parameters;
 	}
 	
-	protected void invokeMethod(String methodName,HttpServletRequest req,HttpServletResponse resp) throws ServletException{
+	protected void invokeMethod(String methodName,HttpServletRequest req, HttpServletResponse resp) throws
+		ServletException
+	{
 		try{
 			Method method=this.getClass().getMethod(methodName, new Class<?>[]{HttpServletRequest.class,HttpServletResponse.class});			
 			method.invoke(this, new Object[]{req,resp});

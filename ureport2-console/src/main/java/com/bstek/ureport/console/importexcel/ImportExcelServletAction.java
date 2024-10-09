@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2017 Bstek
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
  * of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
@@ -15,6 +15,16 @@
  ******************************************************************************/
 package com.bstek.ureport.console.importexcel;
 
+import com.bstek.ureport.console.RenderPageServletAction;
+import com.bstek.ureport.console.cache.TempObjectCache;
+import com.bstek.ureport.definition.ReportDefinition;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.apache.commons.fileupload2.core.DiskFileItemFactory;
+import org.apache.commons.fileupload2.core.FileItem;
+import org.apache.commons.fileupload2.jakarta.JakartaServletFileUpload;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,19 +32,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-import com.bstek.ureport.console.RenderPageServletAction;
-import com.bstek.ureport.console.cache.TempObjectCache;
-import com.bstek.ureport.definition.ReportDefinition;
 
 /**
  * @author Jacky.gao
@@ -49,8 +46,8 @@ public class ImportExcelServletAction extends RenderPageServletAction {
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String tempDir=System.getProperty("java.io.tmpdir");
-		FileItemFactory factory=new DiskFileItemFactory(1000240,new File(tempDir));
-		ServletFileUpload upload=new ServletFileUpload(factory);
+		DiskFileItemFactory factory=DiskFileItemFactory.builder().setBufferSize(1000240).setFile(new File(tempDir)).get();
+		JakartaServletFileUpload upload=new JakartaServletFileUpload(factory);
 		ReportDefinition report=null;
 		String errorInfo=null;
 		try {
@@ -87,7 +84,7 @@ public class ImportExcelServletAction extends RenderPageServletAction {
 		}
 		writeObjectToJson(resp, result);
 	}
-	
+
 	@Override
 	public String url() {
 		return "/import";

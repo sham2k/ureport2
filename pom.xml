@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.sham2k</groupId>
     <artifactId>ureport2-parent</artifactId>
-    <version>2.4.1</version>
+    <version>3.0.1</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +22,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>5.3.39</version>
+                <version>6.1.13</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -30,12 +30,12 @@
             <dependency>
                 <groupId>io.github.sham2k</groupId>
                 <artifactId>ureport2-core</artifactId>
-                <version>2.4.1</version>
+                <version>3.0.1</version>
             </dependency>
             <dependency>
                 <groupId>io.github.sham2k</groupId>
                 <artifactId>ureport2-font</artifactId>
-                <version>2.4.1</version>
+                <version>3.0.1</version>
             </dependency>
 
             <dependency>
@@ -99,14 +99,14 @@
                 <version>2.17.0</version>
             </dependency>
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>3.1.0</version>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.1.0</version>
             </dependency>
             <dependency>
-                <groupId>commons-fileupload</groupId>
-                <artifactId>commons-fileupload</artifactId>
-                <version>1.5</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-fileupload2-jakarta</artifactId>
+                <version>2.0.0-M1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -290,5 +290,5 @@
 
     <name>UReport2 Parent Project</name>
     <url>https://github.com/sham2k/ureport/tree/master/ureport2-parent</url>
-    <description>UReport2 Parent Project contains newer dependency packages, compiled using JDK17 and compatible with Spring 5.x</description>
+    <description>UReport2 Parent Project contains newer dependency packages, compiled using JDK17 and compatible with Spring 6.x/SpringBoot 3.x</description>
 </project>

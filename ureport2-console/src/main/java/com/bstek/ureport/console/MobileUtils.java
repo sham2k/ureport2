@@ -15,10 +15,10 @@
  ******************************************************************************/
 package com.bstek.ureport.console;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author Jacky.gao

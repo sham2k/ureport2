@@ -10,7 +10,8 @@ UReport2是第一款基于Apache-2.0协议开源的中式报表引擎。
 2.  w3cschool： [https://www.w3cschool.cn/ureport](https://www.w3cschool.cn/ureport)
 
 ## 更新说明
-升级除POI外的依赖包为较新版本，并使用JDK-17进行编译。
+（1）升级除POI外的依赖包为较新版本，并使用JDK-17进行编译。
+（2）升级依赖包，支持Spring 6.x/SpringBoot 3.x。
 
 # QQ群
 

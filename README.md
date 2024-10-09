@@ -8,8 +8,11 @@ UReport2 is the first Chinese-style report engine based on Apache-2.0 License.
 
 [中文 README](README-zh_CN.md)
 
-## Update 2.4.1
+## Update 2.4.0
 Upgrade dependency packages other than apache.poi to newer versions and compile them using JDK-17.
+
+## Update 3.0.0
+Upgrade dependency packages to support Spring 6.x and SpringBoot 3.x
 
 # Teaching video
 

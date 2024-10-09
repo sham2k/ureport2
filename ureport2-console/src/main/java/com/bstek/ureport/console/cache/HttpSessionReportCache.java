@@ -20,10 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import com.bstek.ureport.cache.ReportCache;
 import com.bstek.ureport.console.RequestHolder;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @author Jacky.gao
