@@ -1,0 +1,47 @@
+# eclipse work directory
+.settings
+.metadata
+.recommenders
+RemoteSystemsTempFiles
+Servers
+
+# intellij work directory
+.idea
+*.iml
+*.ipr
+*.iws
+projectFilesBackup
+
+# gradle work directory
+build
+bin
+target
+.gradle
+classes
+.cache
+.cache-*
+*.class
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+.classpath
+.project
+javadocs
+
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Node.js
+node_modules/
